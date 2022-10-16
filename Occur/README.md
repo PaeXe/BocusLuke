@@ -8,7 +8,14 @@ Discord : `Peaxe#4347`
 
 ##### Updates
 
-`+e`
+```diff
++ Released
++ Added buggy drag animation
+- remove autochange Gui's name
++ Added Dropdown
+- removed light mode (My eyes hurt)
++ removed obfuscated source
+```
 
 ### Creating a Window
 

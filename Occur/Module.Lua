@@ -1,7 +1,7 @@
+
 local Occur = {}
 
 do
-    local gui = game:GetService("CoreGui"):FindFirstChild("Ocur")
     if game:GetService("CoreGui"):FindFirstChild("Ocur") then
         game:GetService("CoreGui"):FindFirstChild("Ocur"):Destroy()
     end
@@ -1180,22 +1180,4 @@ function Occur:Load(theme, top)
     end
     return Window
 end
-
-local Window = Occur:Load({Theme = Color3.fromRGB(255,255,255)}, {Title = "Haloween UI LIB is here!, create your script for free", Description = "By BocusLuke"})
-
-local Holder = Window:New({Text = "Main", Open = true})
-
-local Section = Holder:Section({Text = "Section"})
-
-Section:Button({Text = "Button xmple", Callback = function() print("World!") end})
-
-Section:Toggle({Text = "Toggle xmple", Enabled = false, Callback = function(State) print(tostring(State)) end})
-
-Section:Slider({Text = "Slider xmple", minvalue = 0, maxvalue = 1000, Callback = function(value) print(tostring(value)) end})
-
-local Dropdown = Section:Dropdown({Text = "Dropdown xmple", Current = nil, List = {1,2,3,4,5}, Callback = function(list) print(tostring(list)) end})
-
-Section:Button({Text = "Refresh Dropdown xmple", Callback = function() Dropdown:Refresh({22,33,44,55,66}) end})
-
-Section:Keybind({Text = "Keybind xmple", Key = nil --[[or Enum.KeyCode.T]], Callback = function() Window:Toggle() end})
 return Occur

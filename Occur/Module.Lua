@@ -1,11 +1,3 @@
-local Haloween = {
-    ReleaseDate = "Haloween",
-    {Owner = "Peaxe#4347" or "BocusLuke"},
-    {Updates = {
-        "Added Button Animation - 10/16/2022"
-    }}
-}
-
 local Occur = {}
 
 do

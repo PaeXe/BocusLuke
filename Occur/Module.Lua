@@ -1,3 +1,11 @@
+local Haloween = {
+    ReleaseDate = "Haloween",
+    {Owner = "Peaxe#4347" or "BocusLuke"},
+    {Updates = {
+        "Added Button Animation - 10/16/2022"
+    }}
+}
+
 local Occur = {}
 
 do
@@ -333,10 +341,16 @@ function Occur:Load(theme, top)
                     game:GetService("TweenService"):Create(v, TweenInfo.new(0.2,Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0.2}):Play()
                 end
             end
+            for i, v in pairs(ContainerHolder:GetDescendants()) do
+                if v:IsA("ScrollingFrame") then
+                    v.Visible = false
+                end
+            end
             game:GetService("TweenService"):Create(Tab, TweenInfo.new(0.2,Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 0.96}):Play()
             game:GetService("TweenService"):Create(TabUIStroke, TweenInfo.new(0.2,Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Transparency = 0.65}):Play()
             game:GetService("TweenService"):Create(TabFrame, TweenInfo.new(0.2,Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = UDim2.new(0, 6, 0, 30)}):Play()
             game:GetService("TweenService"):Create(TabTextLabel, TweenInfo.new(0.2,Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0}):Play()
+            Container.Visible = true
         end)
 
         local Holder = {}
